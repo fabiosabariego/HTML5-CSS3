@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+
+    <!--CONFIGURAÇÕES DE CSS DA PAGINA-->
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    
+    <!-- AREA DE PROGRAMAÇÂO EM JAVASCRIP PARA MUDANÇA DOS ÍCONES AO PASSAR O MOUSE POR CIMA DO MENU-->
+    <script lang="JavaScript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calctotal()
+        {
+            var qnt = parseInt(document.getElementById('cqnt').value);
+            tot = qnt * 1500; /* Neste Caso, cada óculos vale R$1500,00 */
+            document.getElementById('ctot').value = tot;
+        }
+    </script>
+
+</head>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        
+        <figure>
+            <img id="icone" src="_imagens/multimidia.png" alt="Oculos Preto Pequeno">
+        </figure>
+        
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html" target="_self">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('__imagens/contato.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html" target="_self">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- *************************** CABEÇALHO DO ARTIGO *************************** -->
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cab-art">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>Por Fábio Sabariego</h2>
+                    <h3 class="direita">Atualizado em 09/04/2021</h3>
+                </hgroup>
+            </header>
+
+     <!-- *************************** CRIAÇÃO DOS FORMULÁRIOS *************************** -->    
+            <form method="POST" id="fcontato" action="mailto:fabiosabarieego87@hotmail.com" oninput="calctotal();"> <!--ESTE EMAIL NÃO É A MELHOR FORMA, DEVEMOS FAZER ISSO USANDO O BACKEND (PYTHON, JAVA, PHP, ETC.)-->
+                <fieldset id="usuario">
+                    <legend>Identificação do Usuário</legend>
+                        <p><label for="cnome">Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                        <p><label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 Digitos"></p>
+                        <p><label for="cemail">E-mail:</label> <input type="email" name="temail" id="cemail" size="30" maxlength="30" placeholder="seuemail@email.com.br"></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                                <input type="radio" name="tsexo" id="cmasc"><label for="cmasc"></label>Masculino</label> <br>
+                                <input type="radio" name="tsexo" id="cfem"><label for="cfem">Feminino</label>
+                        </fieldset>
+                        <p><label for="cdata">Data de Nascimento: <input type="date" name="tdata" id="cdata"></label> </p>
+                        
+                </fieldset>
+
+                <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                        <p><label for="crua">Logradouro: <input type="text" name="trua" id="crua" size="40" maxlength="80" placeholder="Rua, Avenida, Travessa..."></label></p>
+                        <p><label for="cnum">Número:</label> <input type="number" name="tnum" id="cnum" min="0" max="99999"></p>
+                        <p><label for="cest">Estado: </label>
+                            <select name="test" id="cest">
+                                <optgroup label="Região Suldeste">
+                                    <option value="RJ">Rio de Janeiro</option> <!--O Campo Value irá enviar ao banco de dados o valor "RJ", se nada for colocado enviará o valor "Rio de Janeiro"-->
+                                    <option value="SP" selected>São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select></p>
+
+                        <p><label for="ccid">Cidade: </label>
+                        <input type="text" name="tcid" id="ccid" maxlength="40" size="40" placeholder="Sua Cidade" list="cidade-datalist"></p>
+                        <datalist id="cidade-datalist">
+                            <option value="São Caetano do Sul"></option>
+                            <option value="São Bernardo do Campo"></option>
+                            <option value="Santo André"></option>
+                            <option value="Mauá"></option>
+                        </datalist>
+
+                </fieldset>
+
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
+                        <p><label for="curg">Grau de Urgência:</label>
+                        Min. <input type="range" name="turg" id="curg" min="0" max="10" step="2"> Máx.</p>
+
+                        <p><label for="cmsg">Mensagem:</label>
+                        <textarea name="tmsg" id="cmsg" cols="45" rows="10" placeholder="Digite aqui sua Mensagem"></textarea></p>
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" name="tped" id="cped" checked>
+                        <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+                        <p><label for="ccor">Cor:</label>
+                        <input type="color" name="tcor" id="ccor" value="#0000FF"></p>
+
+                        <p><label for="cqnt">Quantidade:</label>
+                        <input type="number" name="tqnt" id="cqnt" min="0" max="5" value="0"></p>
+
+                        <p><label for="ctot">Preço Total: R$</label>
+                            <input type="text" name="ttot" id="ctot" placeholder="Total a Pagar" readonly></p>
+                </fieldset>
+
+                <input type="image" name="tenviar" src="_imagens/botao-enviar.png" id="botao">
+            </form>
+                    
+        </article>
+    </section>
+
+
+<!-- **************************************************************************************************************************************************** -->
+<footer id="rodape">
+    <p>Copyright 2021 - by Fábio Sabariego <br>
+    <a href="https://www.facebook.com/FSRAutomacao" target="_blank" rel="external">Facebook</a> | <a href="https://www.instagram.com/fsrautomacao/" target="_blank" rel="external">Instagram</a></p>
+   </footer>
+   <!-- **************************************************************************************************************************************************** -->
+   </div>
+   </body>
+   </html>

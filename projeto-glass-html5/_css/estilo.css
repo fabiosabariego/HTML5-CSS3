@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+    background-color:#dddddd;
+    color:#000000;
+    text-shadow: 0.4px 0.4px 0.4px rgba(0, 0, 0, 0.3);
+}
+
+div#interface
+{
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto; /* Os valores das margens, na ordem são: CIMA, DIREITA, BAIXO, ESQUERDA */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* As medidas seguem a ordem de: Deslocamento Lateral, Deslocamento Vertical, Espalhamento da sombra e cor da Sombra */
+    padding: 10px; /* Os valores das margens, na ordem são: CIMA, DIREITA, BAIXO, ESQUERDA. Quando todos os valores forem iguais basta colocar apenas 1 */
+}
+
+p
+{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a
+{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone
+{
+    position: absolute;
+    left: 1210px;
+    top: 70px;
+}
+
+header#cabecalho
+{
+    border-bottom: 1px #606060 solid ; /* As medidas seguem a ordem: Largura borda, cor da borda e Formato da borda */
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /* Esta é uma forma de inserir imagens direto via CSS. Os valores são: Deslocamento Horizontal e Deslocamento Vertical */
+}
+
+header#cabecalho h1
+{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 2.3em;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2
+{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 1.2em;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+p
+{
+    text-align: justify;
+    text-indent: 40px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DE IMAGENS COM LEGENDAS */
+
+figure.foto-legenda
+{
+    position: relative;
+    border: 0px solid white;
+    box-shadow: 2px 2px 8px black;
+}
+
+figure.foto-legenda img
+{
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption
+{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.6s;
+}
+
+figure.foto-legenda:hover figcaption /* Esta função foi feita para, ao passar o mouse em cima da imagem, ele irá aparecer a instrução acima, que é escurecer a imagem e mostrar o texto */
+{
+    opacity: 1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DO MENU */
+
+nav#menu
+{
+    display: block; /* FEITO PARA FLUTUAR O MENU SOBRE A TELA (PARA PODER MOVER ELE PARA QUALQUER LUGAR DA TELA) */
+}
+
+nav#menu ul
+{
+    list-style: none; /* REMOVE OS MARCADORES DOS TEXTOS */
+    text-transform: uppercase; /* TRANSFORMA TODAS AS LETRAS EM MAIUSCULAS */
+    position: absolute; /* COMO POSIÇÃO ABSOLUTA PODES MOVIMENTAR ELE POR DENTRO DE TODO SITE, EM RELATIVA MOVEREMOS APENAS DENTRO DO BLOCK */
+    top: -15px;
+    left: 750px;
+}
+nav#menu li
+{
+    display: inline-block;  /* COLOCA OS TEXTOS EM FORMA ALINHADA (UM AO LADO DO OUTRO, AO INVÉS DE UM ABAIXO DO OUTRO */
+    background-color: lightgrey;    /* COLOCA O FUNDO DO TEXTO EM CINZA CLARO */
+    padding: 10px;  /* SERVE PARA AUMENTAR A COR DE FUNDO, PARA NÃO FICAR COLADA AO TEXTO */
+    margin: 2px;    /* SERVE PARA DAR ESPAÇAMENTO ENTRE OS LIKS DE TEXTO */
+    box-shadow: 1px 1px 4px black;
+}
+
+nav#menu li:hover
+{
+    background-color: #909090;
+}
+
+nav#menu h1
+{
+    display: none;
+}
+
+nav#menu a
+{
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: black;
+    transition: background-color 0.6s;
+}
+
+nav#menu a:hover
+{
+    color: white;
+    text-decoration: underline;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DA LATERAL DIREITA DA PAGINA */
+section#corpo
+{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid ; /* Na ordem: Espessura da Linha, tipo de linha e cor da linha */
+    padding-right: 20px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DO ARTIGO DA PAGINA */
+
+article#noticia-principal h2
+{
+    font-size: 12px;
+    color: #303030;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0pxs;
+}
+
+header#cab-art h1
+{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20px;
+    color: #707070;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cab-art h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: grey;
+    background-color: white;
+    padding: 0px;
+}
+
+header#cab-art h3
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #808080;
+    background-color: white;
+    padding: 0px;
+}
+
+.direita
+{
+    text-align: right;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DA TABELA */
+
+table#tabelaspec
+{
+    border: 1.5px solid rgb(94, 94, 94);
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table#tabelaspec td
+{
+    border: 1.5px solid rgb(94, 94, 94);
+    padding: 10px;
+}
+
+table#tabelaspec td.ce
+{
+    text-align: right;
+    vertical-align: top;
+    background-color: rgba(150, 150, 150, 0.7);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+}
+
+table#tabelaspec td.cd
+{
+    text-align: left;
+    background-color: rgba(190, 190, 190, 0.4);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+
+}
+
+table#tabelaspec caption
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 1.1em;
+    color: rgb(95, 95, 95);
+    text-shadow: 1px 1px 1px rgb(165, 165, 165);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FORMATAÇÃO DO ASIDE */
+aside#lateral
+{
+    display: block;
+    width: 350px;
+    float: right;
+    text-shadow: 0.4px 0.4px 0.4px darkgrey;
+    background-color: rgba(211, 211, 211, 0.7);
+    padding: 0px 10px 0px 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+aside#lateral h1
+{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #707070;
+    margin-top: 10px;
+}
+
+aside#lateral h2
+{
+    color: #ffff;
+    background-color: #707070;
+    font-size: 13pt;
+    padding: 5px 10px 5px 5px;
+}
+
+footer#rodape
+{
+    clear: both;
+    border-top: 1px solid black;
+}
+
+footer#rodape p
+{
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimidia</title>
+
+    <!--CONFIGURAÇÕES DE CSS DA PAGINA-->
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/media.css">
+    
+    <!-- AREA DE PROGRAMAÇÂO EM JAVASCRIP PARA MUDANÇA DOS ÍCONES AO PASSAR O MOUSE POR CIMA DO MENU-->
+    <script lang="JavaScript" src="_javascript/funcoes.js"></script>
+
+</head>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        
+        <figure>
+            <img id="icone" src="_imagens/multimidia.png" alt="Oculos Preto Pequeno">
+        </figure>
+        
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html" target="_self">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html" target="_self">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- *************************** CABEÇALHO DO ARTIGO *************************** -->
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cab-art">
+                <hgroup>
+                    <h3>Glass > Multimídia</h3>
+                    <h1>Sons e Vídeos</h1>
+                    <h2>Por Fábio Sabariego</h2>
+                    <h3 class="direita">Atualizado em 09/04/2021</h3>
+                </hgroup>
+            </header>
+
+            <div id="tv-radio">
+                <audio id="musica" controls>
+                    <source src="../_media/2009-lovers-carvings-bibio.mp3" type="audio/mp3">
+                    Desculpe, mas não foi possível abrir seu audio!
+                </audio>
+
+                <video id="filme" controls poster="_imagens/video-mini03.jpg">
+                    <source src="../_media/getting-started.mp4" type="video/mp4">
+                    Desculpe, mas não foi possível abrir seu Video!
+                </video>
+            </div>
+        </article>
+    </section>
+    
+
+
+
+    <!-- **************************************************************************************************************************************************** -->
+<footer id="rodape">
+    <p>Copyright 2021 - by Fábio Sabariego <br>
+    <a href="https://www.facebook.com/FSRAutomacao" target="_blank" rel="external">Facebook</a> | <a href="https://www.instagram.com/fsrautomacao" target="_blank" rel="external">Instagram</a></p>
+   </footer>
+   <!-- **************************************************************************************************************************************************** -->
+   </div>
+   </body>
+   </html>
